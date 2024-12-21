@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.31)
+
+project(STL-DSA LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(STL-DSA main.cpp graph.h)
+
+include(GNUInstallDirs)
+install(TARGETS STL-DSA
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

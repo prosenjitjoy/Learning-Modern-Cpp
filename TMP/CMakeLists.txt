@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.31)
+
+project(TMP LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(TMP main.cpp)
+
+include(GNUInstallDirs)
+install(TARGETS TMP
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
